@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-brand-red: #D91B24;
+  --color-brand-crimson: #B9141B;
+  --color-brand-dark-red: #7A0C11;
+  --color-brand-charcoal: #0C0C0D;
+  --color-brand-surface: #111113;
+  --color-brand-card: #161619;
+  --color-brand-border: #222226;
+  --color-brand-muted: #7E7E88;
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-oswald), sans-serif;
+  --font-handwriting: var(--font-caveat), cursive;
+  --font-signature: var(--font-reenie), cursive;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Typography styles */
+.display-portfolio {
+  font-family: var(--font-oswald), sans-serif;
+  text-transform: uppercase;
+  line-height: 0.88;
+  letter-spacing: -0.01em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.script-text {
+  font-family: var(--font-caveat), cursive;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.signature-font {
+  font-family: var(--font-caveat), cursive;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #222226;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D91B24;
+}
+
+/* Timeline connector */
+.timeline-stem {
+  width: 1px;
+  background: linear-gradient(to bottom, #333338, #222226);
 }
